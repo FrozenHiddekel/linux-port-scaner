@@ -22,11 +22,11 @@ class myscan:
         except:
             pass
 
-    def sum_square_with_mp(self, num):
+    def start_pool(self, num):
         p = Pool()
         p.map(self.portscan, num)
 
     def mainScan(self):
         numbers = range(self.startPort, self.endPort)
-        self.sum_square_with_mp(numbers)
+        self.start_pool(numbers)
 
